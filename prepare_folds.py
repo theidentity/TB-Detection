@@ -57,6 +57,7 @@ def copy_fold_images(base_path,n_splits):
 		
 def get_stats(base_path):
 	for root, dirs,filenames in os.walk(base_path):
+		filenames = [x for x in filenames if '.png' in x]
 		if len(filenames)>0:
 			print root,":",len(filenames)
 
